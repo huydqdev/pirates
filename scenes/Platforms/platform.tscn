@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://okisbg4u6k6n"]
+
+[ext_resource type="Texture2D" uid="uid://cuen53wx4rc44" path="res://assets/sprites/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_odn6y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8nbd"]
+size = Vector2(96, 32)
+
+[node name="Platform" type="StaticBody2D"]
+position = Vector2(383, 298)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_odn6y")
+region_enabled = true
+region_rect = Rect2(0, 128, 96, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_a8nbd")

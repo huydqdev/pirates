@@ -1,0 +1,243 @@
+[gd_scene load_steps=36 format=3 uid="uid://b232on2lbrw4n"]
+
+[ext_resource type="Script" path="res://scripts/Player/player.gd" id="1_nhwh1"]
+[ext_resource type="Texture2D" uid="uid://dad567cgg5kbu" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/15-Attack 1/attack_1.png" id="2_3qm8l"]
+[ext_resource type="Texture2D" uid="uid://c8obf3hq5o2oh" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/12-Fall Sword/Fall Sword 01.png" id="2_ucst3"]
+[ext_resource type="Texture2D" uid="uid://c6ubrcrr3yob" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/idle_sword.png" id="2_xbou6"]
+[ext_resource type="Texture2D" uid="uid://csr6aw3joflss" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/16-Attack 2/Attack 2 01.png" id="3_o3y2y"]
+[ext_resource type="Texture2D" uid="uid://bxstye18dmjno" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/jump_sword.png" id="4_2hbe0"]
+[ext_resource type="Texture2D" uid="uid://dm2nxclt7trfw" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/16-Attack 2/Attack 2 02.png" id="4_hlyfn"]
+[ext_resource type="Texture2D" uid="uid://c3qly114bsx1u" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/run_sword.png" id="5_r5epr"]
+[ext_resource type="Texture2D" uid="uid://by074pisfsf6h" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/16-Attack 2/Attack 2 03.png" id="5_r8cbe"]
+[ext_resource type="Texture2D" uid="uid://cfxalydb78qdg" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 01.png" id="6_ogluu"]
+[ext_resource type="Texture2D" uid="uid://bxkuvf0ppyopd" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 02.png" id="7_pgtnu"]
+[ext_resource type="Texture2D" uid="uid://r05g3qwp3j4y" path="res://assets/sprites/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/17-Attack 3/Attack 3 03.png" id="8_0uhqq"]
+[ext_resource type="AudioStream" uid="uid://dc48ivddglpkv" path="res://assets/sounds/jump.wav" id="13_0xcn8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2dih"]
+height = 26.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeabs"]
+atlas = ExtResource("2_3qm8l")
+region = Rect2(0, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2r17"]
+atlas = ExtResource("2_3qm8l")
+region = Rect2(64, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mooe"]
+atlas = ExtResource("2_3qm8l")
+region = Rect2(128, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wn5ap"]
+atlas = ExtResource("2_ucst3")
+region = Rect2(0, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t87f"]
+atlas = ExtResource("2_xbou6")
+region = Rect2(0, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u364"]
+atlas = ExtResource("2_xbou6")
+region = Rect2(64, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qusio"]
+atlas = ExtResource("2_xbou6")
+region = Rect2(128, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksjd4"]
+atlas = ExtResource("2_xbou6")
+region = Rect2(192, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro3b3"]
+atlas = ExtResource("2_xbou6")
+region = Rect2(256, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1aar"]
+atlas = ExtResource("4_2hbe0")
+region = Rect2(0, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l71o"]
+atlas = ExtResource("4_2hbe0")
+region = Rect2(64, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hni3t"]
+atlas = ExtResource("4_2hbe0")
+region = Rect2(128, 0, 64, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6caq"]
+atlas = ExtResource("5_r5epr")
+region = Rect2(0, 0, 66, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvi2q"]
+atlas = ExtResource("5_r5epr")
+region = Rect2(66, 0, 66, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwvhk"]
+atlas = ExtResource("5_r5epr")
+region = Rect2(132, 0, 66, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qetfx"]
+atlas = ExtResource("5_r5epr")
+region = Rect2(198, 0, 66, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gd02"]
+atlas = ExtResource("5_r5epr")
+region = Rect2(264, 0, 66, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2xfs"]
+atlas = ExtResource("5_r5epr")
+region = Rect2(330, 0, 66, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_luqb1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eeabs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2r17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mooe")
+}],
+"loop": false,
+"name": &"attack1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_o3y2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hlyfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r8cbe")
+}],
+"loop": false,
+"name": &"attack2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ogluu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pgtnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0uhqq")
+}],
+"loop": false,
+"name": &"attack3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wn5ap")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t87f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u364")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qusio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksjd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro3b3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1aar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l71o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hni3t")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6caq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvi2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwvhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qetfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gd02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2xfs")
+}],
+"loop": false,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wxnxo"]
+radius = 11.0
+height = 28.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jern6"]
+radius = 11.0
+height = 22.0
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(0, -12)
+script = ExtResource("1_nhwh1")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_x2dih")
+
+[node name="AnimationPlayer" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_luqb1")
+animation = &"attack1"
+autoplay = "idle"
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_wxnxo")
+
+[node name="AttackArea" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(22, 1)
+rotation = -0.000348238
+shape = SubResource("CapsuleShape2D_jern6")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_0xcn8")
+bus = &"SFX"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

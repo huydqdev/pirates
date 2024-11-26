@@ -1,0 +1,68 @@
+[gd_scene load_steps=13 format=3 uid="uid://dxtel2ts6y6sh"]
+
+[ext_resource type="Texture2D" uid="uid://c7evl575lr4k2" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="1_0d6y2"]
+[ext_resource type="Script" path="res://scripts/Interactable/checkpoint.gd" id="1_w7g4c"]
+[ext_resource type="Texture2D" uid="uid://chlrtmcjt2p6t" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 02.png" id="2_g014y"]
+[ext_resource type="Texture2D" uid="uid://ddsehce41opso" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 03.png" id="3_6w1m1"]
+[ext_resource type="Texture2D" uid="uid://wv7ptw3xp7y" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 04.png" id="4_0x7if"]
+[ext_resource type="Texture2D" uid="uid://b4a7eesiwst84" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 05.png" id="5_uaoij"]
+[ext_resource type="Texture2D" uid="uid://cefmw50t0cgp6" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 06.png" id="6_wd2ha"]
+[ext_resource type="Texture2D" uid="uid://ddxm7slyy26a4" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png" id="7_0vd4v"]
+[ext_resource type="Texture2D" uid="uid://bsaqx7vh7db5t" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 08.png" id="8_gdtty"]
+[ext_resource type="Texture2D" uid="uid://bdtspo2x713jl" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 09.png" id="9_61xs0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3x1u7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0d6y2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g014y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6w1m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0x7if")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uaoij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wd2ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0vd4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gdtty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_61xs0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smln5"]
+size = Vector2(34, 94)
+
+[node name="Checkpoint" type="Node2D"]
+script = ExtResource("1_w7g4c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3x1u7")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.951508
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+priority = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_smln5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

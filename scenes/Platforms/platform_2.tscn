@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bde03xa0yakt"]
+
+[ext_resource type="Texture2D" uid="uid://oli242uelvqp" path="res://assets/sprites/Pirate Ship/Sprites/Tilesets/Platforms (32x32).png" id="1_qdrdb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tp4xv"]
+size = Vector2(96, 8)
+
+[node name="Platform2" type="StaticBody2D"]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qdrdb")
+region_enabled = true
+region_rect = Rect2(32, 33, 96, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tp4xv")
+one_way_collision = true
