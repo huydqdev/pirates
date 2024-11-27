@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxtel2ts6y6sh"]
+[gd_scene load_steps=14 format=3 uid="uid://dxtel2ts6y6sh"]
 
 [ext_resource type="Texture2D" uid="uid://c7evl575lr4k2" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="1_0d6y2"]
 [ext_resource type="Script" path="res://scripts/Interactable/checkpoint.gd" id="1_w7g4c"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ddxm7slyy26a4" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png" id="7_0vd4v"]
 [ext_resource type="Texture2D" uid="uid://bsaqx7vh7db5t" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 08.png" id="8_gdtty"]
 [ext_resource type="Texture2D" uid="uid://bdtspo2x713jl" path="res://assets/sprites/Palm Tree Island/Sprites/Objects/Flag/Flag 09.png" id="9_61xs0"]
+[ext_resource type="AudioStream" uid="uid://de5fnvibty2dt" path="res://assets/sounds/power_up.wav" id="11_ob0yl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3x1u7"]
 animations = [{
@@ -56,7 +57,7 @@ script = ExtResource("1_w7g4c")
 sprite_frames = SubResource("SpriteFrames_3x1u7")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.951508
+frame_progress = 0.0942234
 
 [node name="Area2D" type="Area2D" parent="."]
 monitorable = false
@@ -64,5 +65,9 @@ priority = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_smln5")
+
+[node name="CheckedSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ob0yl")
+bus = &"SFX"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

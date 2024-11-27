@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		jump_sound.play()
+		#jump_sound.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction: -1, 0, 1
@@ -38,12 +38,10 @@ func _physics_process(delta: float) -> void:
 	if direction > 0:
 		animated_sprite.flip_h = false;
 		hitbox.position.x = default_hitbox
-		print('====right')
 		
 	elif direction < 0:
 		animated_sprite.flip_h = true;
 		hitbox.position.x = -default_hitbox
-		print('====left')
 		
 	# Play animation
 	if !attacking:

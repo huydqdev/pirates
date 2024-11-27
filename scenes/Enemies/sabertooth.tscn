@@ -203,9 +203,12 @@ shape = SubResource("CapsuleShape2D_4ltu3")
 position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_ly8vw")
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-11, 0)
+[node name="RayCastDown" type="RayCast2D" parent="."]
+position = Vector2(-12, 0)
 target_position = Vector2(0, 16)
+
+[node name="RayCastDirect" type="RayCast2D" parent="."]
+target_position = Vector2(-17, 0)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

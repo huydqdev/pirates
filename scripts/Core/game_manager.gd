@@ -14,6 +14,5 @@ func respawn_player():
 
 func gained_coins(coin_gained:int):
 	coins += coin_gained
-	print(coins)
 	emit_signal("gained_coin")
 	

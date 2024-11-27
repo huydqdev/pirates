@@ -15,7 +15,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	if !$RayCast2D.is_colliding() && is_on_floor():
+	if !$RayCastDown.is_colliding() && is_on_floor() || $RayCastDirect.is_colliding():
 		flip()
 	
 	velocity.x = speed
