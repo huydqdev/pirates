@@ -7,6 +7,7 @@
 2. Start the app
    - In Window: just open it
    - In MacOs:
+
    
    ```bash
     cd path_to_the_app_folde
